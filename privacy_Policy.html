@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevDebug - Code Debugging Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg--100 font-sans">
+    <div class="flex flex-col min-h-screen">
+        <!-- Header -->
+        <header class="bg-blue-700 text-white shadow-md">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-bug text-2xl"></i>
+                    <h1 class="text-2xl font-bold">CodeDebug AI</h1>
+                </div>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="index1.html" class="hover:text-indigo-200">Home</a></li>
+                        <li><a href="#features" class="hover:text-indigo-200">Features</a></li>
+                        <li><a href="#privacy" class="hover:text-indigo-200">Privacy</a></li>
+                        <li><a href="#contact" class="hover:text-indigo-200">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="bg-white text-indigo-700 px-4 py-2 rounded-md font-medium hover:bg-indigo-100 transition">
+                    <a href="auth.html">Login</a>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <!-- Hero Section -->
+            <section class="mb-16 text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">AI-Powered Code Debugging</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Get instant help with your code errors while maintaining complete privacy and security of your intellectual property.
+                </p>
+            </section>
+
+            <!-- Privacy Policy Section -->
+            <section id="privacy" class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Privacy & Data Security</h2>
+                
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-3">Our Privacy Commitment</h3>
+                        <p class="text-gray-700 mb-4">
+                            At DevDebug, we understand that your code is valuable intellectual property. We've designed our system with privacy as the top priority.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-indigo-50 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-lock text-indigo-600 mr-2"></i>
+                                    <h4 class="font-medium">No Code Storage</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">
+                                    Your code is processed in real-time and never stored on our servers. Once your session ends, all traces of your code are permanently deleted.
+                                </p>
+                            </div>
+                            <div class="bg-indigo-50 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-shield-alt text-indigo-600 mr-2"></i>
+                                    <h4 class="font-medium">End-to-End Encryption</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">
+                                    All communications are encrypted using industry-standard protocols to ensure your code remains confidential during transmission.
+                                </p>
+                            </div>
+                            <div class="bg-indigo-50 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-user-secret text-indigo-600 mr-2"></i>
+                                    <h4 class="font-medium">Optional Anonymity</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">
+                                    Enable anonymous mode to prevent any metadata collection. No login required for basic debugging features.
+                                </p>
+                            </div>
+                            <div class="bg-indigo-50 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-ban text-indigo-600 mr-2"></i>
+                                    <h4 class="font-medium">No Third-Party Sharing</h4>
+                                </div>
+                                <p class="text-gray-700 text-sm">
+                                    We never share your code or debugging sessions with any third parties. Your intellectual property stays yours.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-3">Full Privacy Policy</h3>
+                        <div class="bg-gray-50 p-4 rounded-lg max-h-64 overflow-y-auto text-sm">
+                            <h4 class="font-medium mb-2">1. Information Collection</h4>
+                            <p class="mb-3">We collect minimal information necessary to provide our service. For debugging sessions, we only process the code you explicitly submit and immediately discard it after processing.</p>
+                            
+                            <h4 class="font-medium mb-2">2. Data Usage</h4>
+                            <p class="mb-3">Your code is used solely for the purpose of providing debugging assistance. We do not use your code to train models or for any other purpose beyond your immediate session.</p>
+                            
+                            <h4 class="font-medium mb-2">3. Data Retention</h4>
+                            <p class="mb-3">Debugging sessions are not stored. Metadata (when not in anonymous mode) is retained for 30 days for service improvement purposes and then permanently deleted.</p>
+                            
+                            <h4 class="font-medium mb-2">4. Security Measures</h4>
+                            <p class="mb-3">We implement industry-standard security measures including encryption, access controls, and regular security audits to protect your information.</p>
+                            
+                            <h4 class="font-medium mb-2">5. Your Rights</h4>
+                            <p>You have the right to request access to, correction of, or deletion of any personal data we may hold about you.</p>
+                        </div>
+                        <div class="mt-4 flex items-center text-sm text-gray-600">
+                            <input type="checkbox" id="agree" class="mr-2">
+                            <label for="agree">I have read and agree to the privacy policy</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Key Features</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="text-indigo-600 text-3xl mb-4">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Secure Debugging</h3>
+                        <p class="text-gray-700">Your code never leaves your browser during processing, ensuring maximum security for proprietary code.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="text-indigo-600 text-3xl mb-4">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">AI-Powered Analysis</h3>
+                        <p class="text-gray-700">Advanced algorithms detect syntax errors, logical flaws, and potential optimizations in multiple languages.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                        <div class="text-indigo-600 text-3xl mb-4">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Session History</h3>
+                        <p class="text-gray-700">Optionally save your debugging sessions locally for future reference (never on our servers).</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="contact" class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">DevDebug</h4>
+                        <p class="text-gray-400">The secure code debugging assistant for professional developers.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index1.html" class="text-gray-400 hover:text-white">Home</a></li>
+                            <li><a href="#features" class="text-gray-400 hover:text-white">Features</a></li>
+                            <li><a href="#privacy" class="text-gray-400 hover:text-white">Privacy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Data Processing Agreement</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-400"><i class="fas fa-envelope mr-2"></i> CodeDebugAI@devdebug.com</li>
+                            <li class="flex items-center text-gray-400"><i class="fas fa-phone mr-2"></i> (822) 704-7229</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                    <p>&copy; 2023 DevDebug. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
